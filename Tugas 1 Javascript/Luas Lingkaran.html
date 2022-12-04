@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tugas Javascript - Wahyu Akbar Pratama Siregar</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Luas dan Keliling lingkaran</legend>
+        <table>
+            <tr>
+                <th>Jari Jari</th>
+                <th>luas lingkaran</th>
+                <th>Keliling Lingkaran</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="jari" onchange="hitung()"></td>
+                <td><input type="text" id="luas"> </td>
+                <td><input type="text" id="keliling"></td>
+            </tr>
+        </table>
+     
+    </fieldset>
+   <script>
+
+       function hitung(){
+           let r = Number(document.getElementById("jari").value);
+           let phi = 22/7
+           let luas = phi*r*r
+           let keliling = 2*phi*r
+
+           document.getElementById("luas").value= luas;
+           document.getElementById("keliling").value= keliling;
+       }
+   </script>
+</body>
+</html>

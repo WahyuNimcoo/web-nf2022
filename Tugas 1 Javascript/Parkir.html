@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Javascript - Wahyu Akbar Pratama Siregar</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Biaya Parkir</legend>
+        <table>
+            <tr>
+                <th>Jam Masuk</th>
+                <th>Jam Keluar</th>
+                <th>Lama Parkir</th>
+                <th>Biaya</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="satu" ></td>
+                <td> <input type="text" id="dua" onchange="biayaParkir()"></td>
+                <td><input type="text" id="tiga"></td>
+                <td><input type="text"  id="empat"></td>
+            </tr>
+        </table>
+    </fieldset>
+    <script>
+        function biayaParkir(){
+            let masuk = Number(document.getElementById("satu").value);
+            let keluar = Number(document.getElementById("dua").value);
+            let lama = keluar - masuk
+            let biaya = 3000
+            document.getElementById("tiga").value= lama +" jam ";
+
+            if(lama == 2){
+                let dua_jam_pertama = biaya
+                document.getElementById("empat").value="Rp. " +dua_jam_pertama ;
+            }else if(lama >= 2){
+                let jam_selanjutnya = (lama - 2)*1000+biaya
+                document.getElementById("empat").value="Rp. " +jam_selanjutnya ;
+            }else{
+                document.getElementById("empat").value= 0;
+            }
+                
+        }
+    </script>
+</body>
+</html>
