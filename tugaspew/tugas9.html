@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tugas Javascript - Wahyu Akbar Pratama</title>
+    <script>
+        function Jumlah(){
+            let x = Number(document.getElementById("bil1").value);
+            let y = Number(document.getElementById("bil2").value);
+            let z = x + y;
+            document.getElementById("bil3"). value=z;
+        }
+        function Kurang(){
+            let x = Number(document.getElementById("bil4").value);
+            let y = Number(document.getElementById("bil5").value);
+            let z = x - y;
+            document.getElementById("bil6"). value=z;
+            }
+    </script>
+
+
+</head>
+<body>
+    <form id="frm1">
+        <input type="text" id="bil1" value="" onchange="Jumlah()"/>
+        <b>+</b> <input type="text" id="bil2" value="" onchange="Jumlah()"/>
+        <b>=</b> <input type="text" id="bil3" value=""/>
+    </form>
+    <form id="frm2">
+        <input type="text" id="bil4" value="" onchange="Kurang()"/>
+        <b>-</b> <input type="text" id="bil5" value="" onchange="Kurang()"/>
+        <b>=</b> <input type="text" id="bil6" value=""/>
+    </form>
+
+
+</body>
+</html>
